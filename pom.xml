@@ -22,6 +22,7 @@
     
     <modules>
         <module>wildfly-jakartaee-ear-archetype</module>
+        <module>wildfly-jakartaee-ear-multiweb-archetype</module>
         <module>wildfly-jakartaee-webapp-archetype</module>
         <module>wildfly-subsystem-archetype</module>
     </modules>
