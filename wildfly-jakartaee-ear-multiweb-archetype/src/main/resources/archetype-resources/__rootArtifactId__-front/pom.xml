@@ -46,11 +46,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Import the JPA API, we use provided scope as the API is included in WildFly / JBoss EAP -->
         <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-            <scope>provided</scope>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>${version.primefaces}</version>
+            <classifier>jakarta</classifier>
         </dependency>
 
         <!-- Dependency on the EJB module so we can use it's services if needed -->
@@ -82,12 +82,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Import the EJB API, we use provided scope as the API is included in WildFly / JBoss EAP -->
-        <dependency>
-            <groupId>jakarta.ejb</groupId>
-            <artifactId>jakarta.ejb-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
+
         <!-- Required for e.g. "javax.annotation.PostConstruct" -->
         <dependency>
             <groupId>jakarta.annotation</groupId>

@@ -21,3 +21,4 @@
         <param-name>primefaces.TRANSFORM_METADATA</param-name>
         <param-value>true</param-value>
     </context-param>
+</web-app>
