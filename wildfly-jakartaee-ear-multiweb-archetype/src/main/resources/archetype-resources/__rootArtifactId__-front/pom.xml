@@ -52,7 +52,11 @@
             <version>${version.primefaces}</version>
             <classifier>jakarta</classifier>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <!-- Dependency on the EJB module so we can use it's services if needed -->
         <dependency>
             <groupId>${project.groupId}</groupId>

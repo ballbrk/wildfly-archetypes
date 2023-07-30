@@ -1,4 +1,4 @@
-This project was created from the archetype "wildfly-jakartaee-ear-archetype".
+This project was created from the archetype "wildfly-jakartaee-ear-multiweb-archetype".
 
 To deploy it:
 Run the maven goals "install wildfly:deploy"

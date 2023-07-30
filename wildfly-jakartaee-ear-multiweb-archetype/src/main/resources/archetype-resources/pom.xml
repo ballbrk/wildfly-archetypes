@@ -239,7 +239,24 @@
     </dependencyManagement>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.geronimo</groupId>
+                <artifactId>geronimo-openapi-maven-plugin</artifactId>
+                <version>1.0.15</version>
+            </plugin>
             <!--Configuration of the maven-compiler-plugin -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.16.0</version>
+                <configuration>
+                    <allowAnyUpdates>false</allowAnyUpdates>
+                    <allowSnapshots>false</allowSnapshots>
+                    <allowMajorUpdates>false</allowMajorUpdates>
+                    <allowMinorUpdates>true</allowMinorUpdates>
+                    <rulesUri>file:///${session.executionRootDirectory}/version-ruleset.xml</rulesUri>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -260,6 +277,33 @@
                 <configuration>
                     <skip>true</skip>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <rules>
+                        <!-- Fixam mínim Maven 3.6 i Java 11 -->
+                        <requireMavenVersion>
+                            <version>3.6.1</version>
+                        </requireMavenVersion>
+                        <requireJavaVersion>
+                            <version>11</version>
+                        </requireJavaVersion>
+                        <!-- Per detectar problemes de dependències -->
+                        <banDuplicatePomDependencyVersions />
+                        <dependencyConvergence />
+                        <reactorModuleConvergence />
+                    </rules>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
