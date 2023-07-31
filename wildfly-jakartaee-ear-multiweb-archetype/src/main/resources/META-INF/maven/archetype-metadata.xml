@@ -161,6 +161,28 @@
                 </fileSet>
             </fileSets>
         </module>
+        <module id="web" dir="__rootArtifactId__-api" name="api">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8" packaged="true" filtered="true">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8" filtered="true">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
         <module id="ear" dir="__rootArtifactId__-ear" name="ear">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
