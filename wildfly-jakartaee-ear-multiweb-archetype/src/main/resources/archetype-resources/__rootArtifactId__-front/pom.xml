@@ -37,19 +37,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Bean Validation Implementation 
-           Provides portable constraints such as @Email 
-           Hibernate Validator is shipped in WildFly / JBoss EAP -->
-        <dependency>
-            <groupId>org.hibernate.validator</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <scope>provided</scope>
-        </dependency>
+
 
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>${version.primefaces}</version>
             <classifier>jakarta</classifier>
         </dependency>
         <dependency>

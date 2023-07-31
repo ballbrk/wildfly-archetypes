@@ -73,6 +73,23 @@
         <version.romeTools>2.1.0</version.romeTools>
         <!-- maven-compiler-plugin -->
         <maven.compiler.release>11</maven.compiler.release>
+        <version.clean.plugin>3.3.1</version.clean.plugin>
+        <version.install.plugin>3.1.1</version.install.plugin>
+        <version.resource.plugin>3.3.1</version.resource.plugin>
+        <version.dependency.plugin>3.6.0</version.dependency.plugin>
+        <version.surfire.plugin>3.1.2</version.surfire.plugin>
+        <version.failsafe.plugin>3.1.2</version.failsafe.plugin>
+        <version.jar.plugin>3.3.0</version.jar.plugin>
+        <version.ejb.plugin>3.2.1</version.ejb.plugin>
+        <version.resources.plugin>3.3.0</version.resources.plugin>
+        <version.war.plugin>3.4.0</version.war.plugin>
+        <version.ear.plugin>3.3.0</version.ear.plugin>
+        <version.deploy.plugin>3.1.1</version.deploy.plugin>
+        <version.site.plugin>3.12.1</version.site.plugin>
+        <version.openapi.plugin>1.0.15</version.openapi.plugin>
+        <version.codehaus.maven.plugin>2.16.0</version.codehaus.maven.plugin>
+        <version.enforcer.plugin>3.3.0</version.enforcer.plugin>
+
     </properties>
 
     <!-- the JBoss community and Red Hat GA Maven repositories -->
@@ -238,17 +255,70 @@
         </dependencies>
     </dependencyManagement>
     <build>
+        <pluginManagement>
         <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${version.clean.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>${version.install.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${version.resources.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${version.dependency.plugin}</version>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.surefire.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${version.failsafe.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${version.jar.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>${version.ejb.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${version.war.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>${version.ear.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>${version.deploy.plugin}</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${version.site.plugin}</version>
+            </plugin>
+
+
+
             <plugin>
                 <groupId>org.apache.geronimo</groupId>
                 <artifactId>geronimo-openapi-maven-plugin</artifactId>
-                <version>1.0.15</version>
+                <version>${version.openapi.plugin}</version>
             </plugin>
             <!--Configuration of the maven-compiler-plugin -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>2.16.0</version>
+                <version>${version.codehaus.maven.plugin}</version>
                 <configuration>
                     <allowAnyUpdates>false</allowAnyUpdates>
                     <allowSnapshots>false</allowSnapshots>
@@ -281,7 +351,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>${version.enforcer.plugin}</version>
                 <configuration>
                     <rules>
                         <!-- Fixam mínim Maven 3.6 i Java 11 -->
@@ -306,6 +376,7 @@
                 </executions>
             </plugin>
         </plugins>
+        </pluginManagement>
     </build>
 
     <profiles>

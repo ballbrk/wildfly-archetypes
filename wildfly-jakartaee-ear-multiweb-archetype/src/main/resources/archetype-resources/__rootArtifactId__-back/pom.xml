@@ -89,7 +89,6 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>${version.primefaces}</version>
             <classifier>jakarta</classifier>
         </dependency>
 
@@ -97,48 +96,39 @@
         <dependency>
             <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
             <artifactId>owasp-java-html-sanitizer</artifactId>
-            <version>${version.owasp}</version>
         </dependency>
         <dependency>
             <groupId>com.github.librepdf</groupId>
             <artifactId>openpdf</artifactId>
-            <version>${version.openpdf}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>${version.poi}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>${version.poi}</version>
         </dependency>
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
-            <version>${version.fileUpload}</version>
         </dependency>
         <dependency>
             <groupId>org.primefaces.extensions</groupId>
             <artifactId>primefaces-extensions</artifactId>
             <classifier>jakarta</classifier>
-            <version>${version.primefacesExtension}</version>
         </dependency>
         <dependency>
             <groupId>org.primefaces.extensions</groupId>
             <artifactId>barcode4j-light</artifactId>
-            <version>${version.barcodeLight}</version>
         </dependency>
         <dependency>
             <groupId>io.nayuki</groupId>
             <artifactId>qrcodegen</artifactId>
-            <version>${version.qrcodeGen}</version>
         </dependency>
         <dependency>
             <groupId>com.rometools</groupId>
             <artifactId>rome</artifactId>
-            <version>${version.romeTools}</version>
         </dependency>
 
         <!-- Test scope dependencies -->
