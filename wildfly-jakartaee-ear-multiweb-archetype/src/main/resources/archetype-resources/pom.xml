@@ -43,7 +43,7 @@
         <!-- [WARNING] Using platform encoding (UTF-8 actually) to copy filtered 
             resources, i.e. build is platform dependent! -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+        <frontend-src-dir>${project.basedir}/src/main/front</frontend-src-dir>
         <!-- JBoss dependency versions -->
         <version.wildfly.maven.plugin>4.2.0.Final</version.wildfly.maven.plugin>
 
@@ -90,6 +90,11 @@
         <version.openapi.plugin>1.0.15</version.openapi.plugin>
         <version.codehaus.maven.plugin>2.16.0</version.codehaus.maven.plugin>
         <version.enforcer.plugin>3.3.0</version.enforcer.plugin>
+        <version.swagger.ui>3.35.1</version.swagger.ui>
+        <version.antrun.plugin>3.1.0</version.antrun.plugin>
+        <version.erislett.maven>1.13.4</version.erislett.maven>
+        <version.node>v18.16.0</version.node>
+        <version.npm>9.5.1</version.npm>
 
     </properties>
 
@@ -253,6 +258,11 @@
                 <artifactId>rome</artifactId>
                 <version>${version.romeTools}</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>${version.erislett.maven}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -307,7 +317,10 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>${version.site.plugin}</version>
             </plugin>
-
+<plugin>
+    <artifactId>maven-antrun-plugin</artifactId>
+    <version>${version.antrun.plugin}</version>
+</plugin>
 
 
             <plugin>

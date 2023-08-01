@@ -131,6 +131,9 @@
                 <fileSet encoding="UTF-8">
                     <directory>src/main/webapp</directory>
                 </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/front</directory>
+                </fileSet>
                 <fileSet encoding="UTF-8" filtered="true">
                     <directory>src/test/resources</directory>
                     <includes>
