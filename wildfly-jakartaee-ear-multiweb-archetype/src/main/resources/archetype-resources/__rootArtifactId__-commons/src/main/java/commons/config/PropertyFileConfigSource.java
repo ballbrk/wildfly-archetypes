@@ -1,4 +1,4 @@
-package ${package}.config;
+package ${package}.commons.config;
 
 import org.eclipse.microprofile.config.spi.ConfigSource;
 import java.io.FileReader;

@@ -12,9 +12,15 @@
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="false">
-            <directory></directory>
+            <directory/>
             <includes>
                 <include>README.txt</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>scripts</directory>
+            <includes>
+                <include>**/*</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" packaged="false">
@@ -31,7 +37,7 @@
         </fileSet>
     </fileSets>
     <modules>
-        <module id="ejb" dir="__rootArtifactId__-ejb" name="ejb">
+        <module id="${rootArtifactId}-ejb" dir="__rootArtifactId__-ejb" name="${rootArtifactId}-ejb">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
@@ -54,7 +60,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="ejb" dir="__rootArtifactId__-service" name="service">
+        <module id="${rootArtifactId}-service" dir="__rootArtifactId__-service" name="${rootArtifactId}-service">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
@@ -76,7 +82,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="ejb" dir="__rootArtifactId__-persistence" name="persistence">
+        <module id="${rootArtifactId}-persistence" dir="__rootArtifactId__-persistence" name="${rootArtifactId}-persistence">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
@@ -98,7 +104,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="ejb" dir="__rootArtifactId__-commons" name="commons">
+        <module id="${rootArtifactId}-commons" dir="__rootArtifactId__-commons" name="${rootArtifactId}-commons">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
@@ -120,7 +126,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="web" dir="__rootArtifactId__-front" name="front">
+        <module id="${rootArtifactId}-front" dir="__rootArtifactId__-front" name="${rootArtifactId}-front">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
@@ -142,7 +148,35 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="web" dir="__rootArtifactId__-back" name="back">
+        <module id="${rootArtifactId}-back" dir="__rootArtifactId__-back" name="${rootArtifactId}-back">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/properties</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8" packaged="true" filtered="true">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8" filtered="true">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-api" dir="__rootArtifactId__-api" name="${rootArtifactId}.api">
             <fileSets>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
@@ -164,29 +198,7 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="web" dir="__rootArtifactId__-api" name="api">
-            <fileSets>
-                <fileSet filtered="true" packaged="true" encoding="UTF-8">
-                    <directory>src/main/java</directory>
-                    <includes>
-                        <include>**/*.java</include>
-                    </includes>
-                </fileSet>
-                <fileSet encoding="UTF-8" packaged="true" filtered="true">
-                    <directory>src/test/java</directory>
-                </fileSet>
-                <fileSet encoding="UTF-8">
-                    <directory>src/main/webapp</directory>
-                </fileSet>
-                <fileSet encoding="UTF-8" filtered="true">
-                    <directory>src/test/resources</directory>
-                    <includes>
-                        <include>**/*.xml</include>
-                    </includes>
-                </fileSet>
-            </fileSets>
-        </module>
-        <module id="ear" dir="__rootArtifactId__-ear" name="ear">
+        <module id="${rootArtifactId}-ear" dir="__rootArtifactId__-ear" name="${rootArtifactId}-ear">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/application</directory>

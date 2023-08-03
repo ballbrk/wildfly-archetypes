@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ${package};
+package ${package}.api;
 
 import jakarta.annotation.PostConstruct;
 import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;

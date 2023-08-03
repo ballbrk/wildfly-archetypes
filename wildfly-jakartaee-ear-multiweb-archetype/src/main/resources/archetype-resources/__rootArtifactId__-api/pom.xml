@@ -142,9 +142,9 @@
                             <goal>openapi.json</goal>
                         </goals>
                         <configuration>
-                            <application>${package}.Application</application>
+                            <application>${package}.api.Application</application>
                             <endpointClasses>
-                                <endpointClass>${package}.services.DemoResource</endpointClass>
+                                <endpointClass>${package}.api.services.DemoResource</endpointClass>
                             </endpointClasses>
                             <endpointClasses>
 
