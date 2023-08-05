@@ -38,12 +38,22 @@
         </dependency>
 
 
-
-        <!-- Dependency on the EJB module so we can use it's services if needed -->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>${rootArtifactId}-ejb</artifactId>
-            <type>ejb</type>
+            <version>${version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${rootArtifactId}-service</artifactId>
+            <version>${version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${rootArtifactId}-commons</artifactId>
+            <version>${version}</version>
             <scope>provided</scope>
         </dependency>
 

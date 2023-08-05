@@ -36,14 +36,6 @@
             <artifactId>jakarta.enterprise.cdi-api</artifactId>
             <scope>provided</scope>
         </dependency>
-
-
-
-        <dependency>
-            <groupId>org.primefaces</groupId>
-            <artifactId>primefaces</artifactId>
-            <classifier>jakarta</classifier>
-        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -53,7 +45,19 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>${rootArtifactId}-ejb</artifactId>
-            <type>ejb</type>
+            <version>${version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${rootArtifactId}-service</artifactId>
+            <version>${version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${rootArtifactId}-commons</artifactId>
+            <version>${version}</version>
             <scope>provided</scope>
         </dependency>
 
