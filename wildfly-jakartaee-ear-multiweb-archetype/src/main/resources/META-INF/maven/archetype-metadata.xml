@@ -18,25 +18,24 @@
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="false">
-            <directory/>
             <includes>
                 <include>README.txt</include>
             </includes>
         </fileSet>
-        <fileSet filtered="true" packaged="false">
+        <fileSet filtered="false" packaged="false">
             <directory>scripts</directory>
             <includes>
                 <include>**/*</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" packaged="false">
-            <directory></directory>
+
             <includes>
                 <include>version-ruleset.xml</include>
             </includes>
         </fileSet>
         <fileSet filtered="false" packaged="false">
-            <directory></directory>
+
             <includes>
                 <include>.gitignore</include>
             </includes>
@@ -71,13 +70,22 @@
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
                 </fileSet>
-                <fileSet filtered="true" encoding="UTF-8">
+                <fileSet filtered="false" encoding="UTF-8">
                     <directory>src/main/resources</directory>
                     <includes>
                         <include>**/*.xml</include>
-                        <include>**/*.properties</include>
                     </includes>
                 </fileSet>
+                <fileSet filtered="false" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.properties</include>
+                        <include>*.properties</include>
+                    </includes>
+                </fileSet>
+
+
+
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/test/java</directory>
                 </fileSet>
