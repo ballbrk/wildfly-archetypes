@@ -22,11 +22,28 @@
                 <include>README.txt</include>
             </includes>
         </fileSet>
-        <fileSet filtered="false" packaged="false">
+        <fileSet filtered="true" packaged="false">
             <directory>scripts</directory>
             <includes>
                 <include>**/*</include>
             </includes>
+        </fileSet>
+
+        <fileSet filtered="false" packaged="false">
+            <directory>datasources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+
+        </fileSet>
+
+
+        <fileSet filtered="true" packaged="false">
+            <directory>doc</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+
         </fileSet>
         <fileSet filtered="true" packaged="false">
 

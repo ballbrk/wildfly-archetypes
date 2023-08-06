@@ -8,7 +8,8 @@
              http://www.ironjacamar.org/doc/schema/datasources_1_2.xsd">
 
     <datasource jndi-name="java:jboss/datasources/${rootArtifactId}DS" pool-name="${rootArtifactId}DS">
-        <connection-url>jdbc:postgresql://localhost:5432/${__rootArtifactId__}</connection-url>
+        <connection-url>jdbc:postgresql://localhost:5432/${rootArtifactId}</connection-url>
+        <new-connection-sql> ALTER USER ${rootArtifactId} SET search_path to '${rootArtifactId}';  </new-connection-sql>
         <driver>postgresql</driver>
         <security>
             <user-name>${rootArtifactId}</user-name>
