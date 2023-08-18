@@ -95,7 +95,10 @@
         <version.erislett.maven>1.13.4</version.erislett.maven>
         <version.node>v18.16.0</version.node>
         <version.npm>9.5.1</version.npm>
-
+        <version.jpamodelgen>5.6.15.Final</version.jpamodelgen>
+        <version.jacksondatabind>2.15.2</version.jacksondatabind>
+        <version.jacksondatatype>2.15.2</version.jacksondatatype>
+        <version.jacksonannotations>2.15.2</version.jacksonannotations>
     </properties>
 
     <!-- the JBoss community and Red Hat GA Maven repositories -->
@@ -193,6 +196,26 @@
                 <groupId>org.eclipse.microprofile.config</groupId>
                 <artifactId>microprofile-config-api</artifactId>
                 <version>${version.mp-config}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-jpamodelgen-jakarta</artifactId>
+                <version>${version.jpamodelgen}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${version.jacksonannotations}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${version.jacksondatabind}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${version.jacksondatatype}</version>
             </dependency>
             <dependency>
                 <groupId>org.mapstruct</groupId>
